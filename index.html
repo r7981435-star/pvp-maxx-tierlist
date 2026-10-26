@@ -196,20 +196,46 @@
 <!-- Text Buttons -->
 
 <style>
-    .box-button {
-        display: block;
-        border: 1px solid #555;
-        border-radius: 8px;
-        padding: 10px 20px;
-        background: #222;
-        color: white;
-        cursor: pointer;
-        transition: background 0.2s ease;
-    }
+.box-button {
+    display: block;
+    position: relative;
+    border: 1px solid #17344a;
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin: 10px 0;
 
-    .box-button:hover {
-        background: #383838;
-    }
+    background: linear-gradient(
+        135deg,
+        #0b1118,
+        #101b27
+    );
+
+    color: #e8f4ff;
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    box-shadow: 0 2px 8px #00000055;
+    transition: all 0.25s ease;
+    cursor: pointer;
+	text-shadow: 2px 3px 5px #000000, 0 0 8px #0091ff66;
+}
+
+/* Hover effect */
+.box-button:hover {
+    background: linear-gradient(
+        135deg,
+        #102438,
+        #142f46
+    );
+
+    border-color: #0091ff;
+    box-shadow:
+        0 0 8px #0091ff33,
+        0 0 18px #0091ff22;
+
+    transform: translateY(-2px);
+}
 </style>
 
 <!-- Background -->
