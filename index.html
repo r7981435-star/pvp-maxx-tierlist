@@ -39,6 +39,44 @@
 }
 </style>
 
+<style>
+	
+.gamemode-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin: 35px 0 25px;
+    color: #ffffff;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 12px #0091ff33;
+}
+
+.gamemode-title::before,
+.gamemode-title::after {
+    content: "";
+    height: 1px;
+    width: 80px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #07558a
+    );
+}
+
+.gamemode-title::after {
+    background: linear-gradient(
+        to left,
+        transparent,
+        #07558a
+    );
+}
+</style>
+
 <!-- Discord Button -->
 
 <a href="https://discord.gg/PcqWwzCaYz"
@@ -231,7 +269,7 @@ body {
 
 <!-- Mace -->
 	
-<h2>Mace</h2>
+<h2 class="gamemode-title">Mace</h2>
 <hr class="separator">
 <p class="box-button" onclick="openPopup('Zonestial', 'Mace Tier: HT3')">1: Zonestial - HT3</p>
 <p class="box-button" onclick="openPopup('ItzRealSiam', 'Mace Tier: HT4')">2: ItzRealSiam - HT4</p>
@@ -241,7 +279,7 @@ body {
 
 <!-- Sword -->
 	
-<h2>Sword</h2>
+<h2 class="gamemode-title">Sword</h2>
 <hr class="separator">
 <p class="box-button" onclick="openPopup('Zonestial', 'Sword Tier: LT2')">1: Zonestial - LT2</p>
 <p class="box-button" onclick="openPopup('ItzRealSiam', 'Sword Tier: LT3')">2: ItzRealSiam - LT3</p>
@@ -251,7 +289,7 @@ body {
 
 <!-- SMP -->
 	
-<h2>SMP</h2>
+<h2 class="gamemode-title">SMP</h2>
 <hr class="separator">
 <p class="box-button" onclick="openPopup('Zonestial', 'SMP Tier: LT2')">1: Zonestial - LT2</p>
 <p class="box-button" onclick="openPopup('ItzRealSiam', 'SMP Tier: HT3')">2: ItzRealSiam - HT3</p>
@@ -259,7 +297,7 @@ body {
 
 <!-- Diamond SMP -->
 	
-<h2>Diamond SMP</h2>
+<h2 class="gamemode-title">Diamond SMP</h2>
 <hr class="separator">
 <p class="box-button" onclick="openPopup('Zonestial', 'Diamond SMP Tier: HT3')">1: Zonestial - HT4</p>
 <p class="box-button" onclick="openPopup('ItzRealSiam', 'Diamond SMP Tier: LT4')">2: ItzRealSiam - LT4</p>
@@ -267,7 +305,7 @@ body {
 
 <!-- Vanilla -->
 	
-<h2>Vanilla</h2>
+<h2 class="gamemode-title">Vanilla</h2>
 <hr class="separator">
 <p class="box-button" onclick="openPopup('ItzRealSiam', 'Vanilla Tier: LT3')">1: ItzRealSiam - LT3</p>
 <p class="box-button" onclick="openPopup('Zonestial', 'Vanilla Tier: HT5')">2: Zonestial - HT5</p>
@@ -275,14 +313,14 @@ body {
 
 <!-- Spearmace -->
 
-<h2>Spearmace</h2>
+<h2 class="gamemode-title">Spearmace</h2>
 <hr class="separator">
 <p class="box-button" onclick="openPopup('Zonestial', 'Spearmace Tier: HT5')">1: Zonestial - LT2</p>
 <hr class="separator">
 
 <!-- LT Cart -->
 	
-<h2>LT Cart</h2>
+<h2 class="gamemode-title">LT Cart</h2>
 <hr class="separator">
 <p class="box-button" onclick="openPopup('Zonestial', 'LT Cart Tier: LT1')">1: Zonestial - LT1</p>
 <p class="box-button" onclick="openPopup('ItzRealSiam', 'LT Cart Tier: LT4')">2: ItzRealSiam - LT4</p>
@@ -290,21 +328,21 @@ body {
 
 <!-- Nethpot -->
 
-<h2>Nethpot</h2>
+<h2 class="gamemode-title">Nethpot</h2>
 <hr class="separator">
 <p class="box-button" onclick="openPopup('ItzRealSiam', 'Nethpot Tier: LT3')">1: ItzRealSiam - LT3</p>
 <hr class="separator">
 
 <!-- Pot -->
 
-<h2>Pot</h2>
+<h2 class="gamemode-title">Pot</h2>
 <hr class="separator">
 <p class="box-button" onclick="openPopup('ItzRealSiam', 'Pot Tier: LT3')">1: ItzRealSiam - LT3</p>
 <hr class="separator">
 
 <!-- UHC -->
 
-<h2>UHC</h2>
+<h2 class="gamemode-title">UHC</h2>
 <hr class="separator">
 <p class="box-button" onclick="openPopup('ItzRealSiam', 'UHC Tier: LT4')">1: ItzRealSiam - LT4</p>
 <hr class="separator">
