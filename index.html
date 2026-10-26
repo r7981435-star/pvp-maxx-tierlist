@@ -1,0 +1,214 @@
+<html lang="en">
+<meta charset="UTF-8">
+<title>PvP Maxx Tierlist</title>
+<!-- Favicon link -->
+<link rel="icon" type="image/png" href="favicon.png">
+</html>
+
+<!-- Popup Style -->
+
+<style>
+    /* Dark background behind the popup */
+    .popup-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(4px);
+        z-index: 1000;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* The popup window */
+    .popup {
+        background: #111;
+        color: white;
+        border: 1px solid #0091ff;
+        border-radius: 12px;
+        padding: 25px;
+        width: 320px;
+        max-width: calc(100% - 80px);
+        text-align: center;
+        box-shadow: 0 0 25px rgba(0, 145, 255, 0.2);
+        position: relative;
+        animation: popup-appear 0.2s ease;
+    }
+
+    .popup h2 {
+        margin-top: 0;
+        color: #0091ff;
+    }
+
+    /* Close button */
+    .popup-close {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        background: none;
+        border: none;
+        color: #888;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .popup-close:hover {
+        color: white;
+    }
+
+    @keyframes popup-appear {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+</style>
+
+
+<!-- Icon -->
+
+<img src="favicon.png" alt="Website Icon" class="top-icon">
+
+<style>
+	.top-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    display: block;
+    margin: 15px auto 10px auto;
+	border-radius: 25%;
+}
+	</style>
+
+<!-- Text Buttons -->
+
+<style>
+    .box-button {
+        display: block;
+        border: 1px solid #555;
+        border-radius: 8px;
+        padding: 10px 20px;
+        background: #222;
+        color: white;
+        cursor: pointer;
+        transition: background 0.2s ease;
+    }
+
+    .box-button:hover {
+        background: #383838;
+    }
+</style>
+
+<style>
+    body {
+        background-color: black;
+        color: white;
+    }
+</style>
+
+<!-- Seperator -->
+
+<style>
+.separator {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border: none;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #0091ff,
+        transparent
+    );
+    margin: 20px 0;
+    padding: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+</style>
+
+<!-- Font -->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 700;
+}
+</style>
+
+<!-- Page -->
+
+<div style="text-align:center;"><h1>PVP MAXX TIERLIST</h1>
+<hr class="separator">
+<h2>Mace</h2>
+<hr class="separator">
+<p class="box-button" onclick="openPopup('Zonestial', 'Mace Tier: HT3')">1: Zonestial - HT3</p>
+<p class="box-button" onclick="openPopup('ItzRealSiam', 'Mace Tier: HT4')">2: ItzRealSiam - HT4</p>
+<p class="box-button" onclick="openPopup('Enteleriant', 'Mace Tier: LT4')">3: Enteleriant - LT4</p>
+<p class="box-button" onclick="openPopup('The_Eclipsed_Sun', 'Mace Tier: HT5')">4: The_Eclipsed_Sun - HT5</p>
+<hr class="separator">
+<h2>Sword</h2>
+<hr class="separator">
+<p class="box-button" onclick="openPopup('Zonestial', 'Sword Tier: LT2')">1: Zonestial - LT2</p>
+<p class="box-button" onclick="openPopup('ItzRealSiam', 'Sword Tier: LT3')">2: ItzRealSiam - LT3</p>
+<p class="box-button" onclick="openPopup('Enteleriant', 'Sword Tier: HT5')">3: Enteleriant - HT5</p>
+<p class="box-button" onclick="openPopup('The_Eclipsed_Sun', 'Sword Tier: HT6')">4: The_Eclipsed_Sun - HT6</p>
+<hr class="separator">
+<h2>SMP</h2>
+<hr class="separator">
+<p class="box-button" onclick="openPopup('Zonestial', 'SMP Tier: LT2')">1: Zonestial - LT2</p>
+<p class="box-button" onclick="openPopup('ItzRealSiam', 'SMP Tier: HT3')">2: ItzRealSiam - HT3</p>
+<hr class="separator">
+<h2>Diamond SMP</h2>
+<hr class="separator">
+<p class="box-button" onclick="openPopup('Zonestial', 'Diamond SMP Tier: HT3')">1: Zonestial - HT4</p>
+<p class="box-button" onclick="openPopup('ItzRealSiam', 'Diamond SMP Tier: LT4')">2: ItzRealSiam - LT4</p>
+<hr class="separator">
+<h2>Vanilla</h2>
+<hr class="separator">
+<p class="box-button" onclick="openPopup('ItzRealSiam', 'Vanilla Tier: LT3')">1: ItzRealSiam - LT3</p>
+<p class="box-button" onclick="openPopup('Zonestial', 'Vanilla Tier: HT5')">2: Zonestial - HT5</p>
+</div>
+
+<!-- Popup Div -->
+
+<div class="popup-overlay" id="popupOverlay" onclick="closePopup(event)">
+    <div class="popup">
+        <button class="popup-close" onclick="closePopup()">&times;</button>
+
+        <h2 id="popupTitle">Player</h2>
+        <p id="popupDescription">Player information goes here.</p>
+    </div>
+</div>
+
+<!-- Popup Script -->
+
+<script>
+    function openPopup(name, description) {
+        document.getElementById("popupTitle").textContent = name;
+        document.getElementById("popupDescription").textContent = description;
+
+        const overlay = document.getElementById("popupOverlay");
+        overlay.style.display = "flex";
+    }
+
+    function closePopup(event) {
+        if (!event || event.target.id === "popupOverlay" ||
+            event.currentTarget.classList.contains("popup-close")) {
+            document.getElementById("popupOverlay").style.display = "none";
+        }
+    }
+
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            document.getElementById("popupOverlay").style.display = "none";
+        }
+    });
+</script>
