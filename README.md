@@ -1,2 +1,2 @@
 # pvp-maxx-tierlist
-PvP Maxx tierlist website with popup player details.
+This is the source code of my PvP Maxx tierlist project. I have built this from the ground up.
