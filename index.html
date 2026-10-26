@@ -370,17 +370,113 @@
 
 <style>
 body {
-    background-color: #000000;
-    background-image: linear-gradient(
-        to bottom,
-        #000000 0%,
-        #030609 50%,
-        #080d12 100%
-    );
-    background-repeat: no-repeat;
+    background-color: #030609;
+    background-image:
+        radial-gradient(ellipse at 15% 20%, #082137 0%, transparent 48%),
+        radial-gradient(ellipse at 85% 75%, #061c30 0%, transparent 48%),
+        radial-gradient(ellipse at 50% 50%, #05111d 0%, transparent 65%),
+        linear-gradient(135deg, #030609, #050a10, #020407);
+
+    background-size: 180% 180%, 180% 180%, 150% 150%, 100% 100%;
     background-attachment: fixed;
-    background-size: 100% 100vh;
+    background-repeat: no-repeat;
     color: white;
+
+    animation: backgroundDrift 18s ease-in-out infinite alternate;
+}
+
+/* Slowly moving dark-blue glow */
+@keyframes backgroundDrift {
+    0% {
+        background-position: 0% 0%, 100% 100%, 50% 0%, center;
+    }
+
+    50% {
+        background-position: 100% 60%, 0% 40%, 100% 100%, center;
+    }
+
+    100% {
+        background-position: 30% 100%, 70% 0%, 0% 50%, center;
+    }
+}
+
+/* Floating blue particles */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(circle, #168cff 1.3px, transparent 2px),
+        radial-gradient(circle, #42b5ff 1.5px, transparent 2.5px),
+        radial-gradient(circle, #0871c5 1px, transparent 2px),
+        radial-gradient(circle, #279fff 1.3px, transparent 2px),
+        radial-gradient(circle, #168cff 1.5px, transparent 2.5px),
+        radial-gradient(circle, #42b5ff 1px, transparent 2px),
+        radial-gradient(circle, #0871c5 1.3px, transparent 2px),
+        radial-gradient(circle, #279fff 1px, transparent 2px);
+
+    background-size:
+        240px 280px,
+        310px 330px,
+        190px 230px,
+        350px 300px,
+        270px 220px,
+        380px 360px,
+        220px 310px,
+        330px 250px;
+
+    background-position:
+        0 0,
+        50px 100px,
+        100px 40px,
+        200px 150px,
+        80px 220px,
+        250px 50px,
+        140px 180px,
+        300px 90px;
+
+    opacity: 0.4;
+    filter: drop-shadow(0 0 3px #0091ff55);
+
+    animation: blueParticles 28s linear infinite;
+}
+
+/* Particles drift slowly upward */
+@keyframes blueParticles {
+    from {
+        background-position:
+            0 0,
+            50px 100px,
+            100px 40px,
+            200px 150px,
+            80px 220px,
+            250px 50px,
+            140px 180px,
+            300px 90px;
+    }
+
+    to {
+        background-position:
+            150px -220px,
+            -100px -80px,
+            220px -160px,
+            80px -100px,
+            180px -100px,
+            -50px -250px,
+            280px -120px,
+            100px -200px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    body,
+    body::before {
+        animation: none;
+    }
 }
 </style>
 
