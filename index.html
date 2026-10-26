@@ -12,6 +12,32 @@
 </html>
 
 <style>
+	h1 {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    background: linear-gradient(
+        to bottom,
+        #ffffff 20%,
+        #a8dfff 60%,
+        #0091ff 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    filter: drop-shadow(0 3px 2px #000000)
+            drop-shadow(0 0 10px #0091ff33);
+
+    margin: 20px 0 25px;
+}
+	</style>
+
+<style>
 
 .testers-container {
     display: flex;
@@ -285,13 +311,13 @@
 <img src="favicon.png" alt="Website Icon" class="top-icon">
 
 <style>
-	.top-icon {
-    width: 64px;
-    height: 64px;
+.top-icon {
+    width: 90px;
+    height: 90px;
     object-fit: contain;
     display: block;
     margin: 15px auto 10px auto;
-	border-radius: 25%;
+    border-radius: 25%;
 }
 	</style>
 
@@ -366,16 +392,25 @@ body {
     width: 100%;
     height: 2px;
     border: none;
+
     background: linear-gradient(
         to right,
-        transparent,
-        #0091ff,
-        transparent
+        transparent 0%,
+        #073353 15%,
+        #0878bd 35%,
+        #0091ff 50%,
+        #0878bd 65%,
+        #073353 85%,
+        transparent 100%
     );
-    margin: 20px 0;
+
+    box-shadow: 0 0 8px #0091ff44;
+
+    margin: 24px 0;
     padding: 0;
-    border-radius: 5px;
+    border-radius: 50%;
     box-sizing: border-box;
+    opacity: 0.9;
 }
 </style>
 
