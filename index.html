@@ -11,6 +11,34 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </html>
 
+<style>
+
+.testers-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 20px;
+}
+
+.testers-button {
+    display: inline-block;
+    padding: 10px 24px;
+    border: 1px solid #0091ff;
+    border-radius: 8px;
+    background: #080d12;
+    color: white;
+    text-decoration: none;
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.testers-button:hover {
+    background: #0091ff;
+    box-shadow: 0 0 15px #0091ff66;
+    transform: translateY(-2px);
+}
+</style>
+
 <!-- Discord Button -->
 
 <a href="https://discord.gg/PcqWwzCaYz"
@@ -257,6 +285,7 @@ body {
 <h2>LT Cart</h2>
 <hr class="separator">
 <p class="box-button" onclick="openPopup('Zonestial', 'LT Cart Tier: LT1')">1: Zonestial - LT1</p>
+<p class="box-button" onclick="openPopup('ItzRealSiam', 'LT Cart Tier: LT4')">2: ItzRealSiam - LT4</p>
 <hr class="separator">
 
 <!-- Nethpot -->
@@ -271,6 +300,13 @@ body {
 <h2>Pot</h2>
 <hr class="separator">
 <p class="box-button" onclick="openPopup('ItzRealSiam', 'Pot Tier: LT3')">1: ItzRealSiam - LT3</p>
+<hr class="separator">
+
+<!-- UHC -->
+
+<h2>UHC</h2>
+<hr class="separator">
+<p class="box-button" onclick="openPopup('ItzRealSiam', 'UHC Tier: LT4')">1: ItzRealSiam - LT4</p>
 <hr class="separator">
 </div>
 
@@ -309,3 +345,8 @@ body {
         }
     });
 </script>
+
+<div class="testers-container">
+    <a href="index2.html" class="testers-button">Testers</a>
+</div>
+
